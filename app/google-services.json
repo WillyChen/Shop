@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "948220809770",
+    "firebase_url": "https://shopkotlin.firebaseio.com",
+    "project_id": "shopkotlin",
+    "storage_bucket": "shopkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948220809770:android:f24d7934361e65bd",
+        "android_client_info": {
+          "package_name": "tw.com.yuantsung.shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948220809770-3s6bqerr2eq1rvp3mg6mfdk0vatp4vqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tw.com.yuantsung.shop",
+            "certificate_hash": "9abbc070b397bd9524488c22728b79af9afc2dae"
+          }
+        },
+        {
+          "client_id": "948220809770-ce8bq4cckklo7t5im7rrj93v8oaqeuo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTKPFavdP2X8dJnhXSTYpSNxNIRASeLjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948220809770-ce8bq4cckklo7t5im7rrj93v8oaqeuo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
