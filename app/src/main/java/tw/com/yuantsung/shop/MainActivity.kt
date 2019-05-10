@@ -21,9 +21,11 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.row_function.view.*
+import retrofit2.Call
+import retrofit2.http.GET
 
 class MainActivity : AppCompatActivity() {
-    val TAG = MainActivity::class.java.name
+    private val TAG = MainActivity::class.java.simpleName
     private val RC_NICKNAME = 101
     private val RC_SIGNUP = 100
     var isSignup = false
@@ -33,7 +35,9 @@ class MainActivity : AppCompatActivity() {
         "Prking",
         "Download coupons",
         "News",
-        "Map"
+        "Movie",
+        "Map",
+        "Bus"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,13 +98,28 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onBindViewHolder(holder: FunctionHolder, position: Int) {
+
             holder.nameText.text = functions.get(position)
+            holder.itemView.setOnClickListener { view ->
+                holderAction(holder,position)
+            }
         }
 
     }
 
+    private fun holderAction(holder: FunctionHolder, position: Int) {
+        Log.d(TAG,"holder click: ${position.toString()}")
+        when(position) {
+            1 -> startActivity(Intent(this,ContactActivity::class.java))
+            2 -> startActivity(Intent(this,ParkingActivity::class.java))
+            5 -> startActivity(Intent(this,MovieActivity::class.java))
+            7 -> startActivity(Intent(this,BusActivity::class.java))
+        }
+    }
+
     class FunctionHolder(view: View) : RecyclerView.ViewHolder(view) {
         var nameText : TextView = view.name
+
     }
 
     override fun onResume() {
@@ -157,3 +176,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
